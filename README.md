@@ -82,16 +82,16 @@ The final model architecture consisted of a convolution neural network with the 
 
 | Layer         		      |     Description	        					                 | 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		      | 160x225x3  image   							             | 
-| Convolution 5x5     	 | 2x2 stride, Valid padding, outputs 79x111x24 	  |
+| Input         		      | 65x320x3  image   							             | 
+| Convolution 5x5     	 | 2x2 stride, Valid padding, outputs 31x159x24 	  |
 | RELU					             |											                                   	|
-| Convolution 5x5	      | 2x2 stride, Valid padding, outputs 38x54x36 	|
+| Convolution 5x5	      | 2x2 stride, Valid padding, outputs 14x78x36 	|
 | RELU					             |												            |
-| Convolution 5x5	      | 2x2 stride, Valid padding, outputs 18x26x48 	|
+| Convolution 5x5	      | 2x2 stride, Valid padding, outputs 6x38x48 	|
 | RELU					             |												            |
-| Convolution 3x3	      | 2x2 stride, Valid padding, outputs 9x13x64 	|
+| Convolution 3x3	      | 2x2 stride, Valid padding, outputs 3x19x64 	|
 | RELU					             |												            |
-| Convolution 3x3	      | 2x2 stride, Valid padding, outputs 4x6x64 	|
+| Convolution 3x3	      | 2x2 stride, Valid padding, outputs 1x9x64 	|
 | RELU					             |												            |
 | Flatten					             |												            |
 |	Fully Connected              	|	100											|
