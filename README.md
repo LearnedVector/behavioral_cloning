@@ -10,15 +10,10 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/placeholder.png "Model Visualization"
-[image3]: ./examples/placeholder_small.png "Recovery Image"
-[image4]: ./examples/placeholder_small.png "Recovery Image"
-[image5]: ./examples/placeholder_small.png "Recovery Image"
-[image6]: ./examples/placeholder_small.png "Normal Image"
-[image7]: ./examples/placeholder_small.png "Flipped Image"
-
-## Rubric Points
-###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
+[image1]: ./images/center.jpg "center"
+[image2]: ./images/right.jpg "right"
+[image3]: ./images/left.jpg "left"
+[image4]: ./images/crop.jpg "crop"
 
 ---
 ### Files Submitted & Code Quality
@@ -110,13 +105,15 @@ The final model architecture consisted of a convolution neural network with the 
 To capture good training data I first recorded a single lap. My model did not do so well so I decided to record 5 laps around the track. My model did a lot better but still was not perfect. I then decided to try Udacity's provided data and that worked best. 
 
 Example of the data collected
-![alt text][image2]
+![alt text][image1]
 
 I decided to use the left and right camera angles and provide a correction value. This helped my model stay away from the side lines. 
 
+![alt text][image2]
 ![alt text][image3]
-![alt text][image4]
 
 I then cropped each image to only provide data of the road. This helped the model get rid of the noise. 
+![alt text][image4]
+
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3 as evidenced by the model training loss or validation loss was barely changing. I used an adam optimizer so that manually training the learning rate wasn't necessary.
