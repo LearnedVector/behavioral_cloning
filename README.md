@@ -105,7 +105,8 @@ The final model architecture consisted of a convolution neural network with the 
 To capture good training data I first recorded a single lap. My model did not do so well so I decided to record 5 laps around the track. My model did a lot better but still was not perfect. I then decided to try Udacity's provided data and that worked best. 
 
 Example of the data collected
-![alt text][image1]
+
+![alt text][image4]
 
 I decided to use the left and right camera angles and provide a correction value. This helped my model stay away from the side lines. 
 
@@ -113,7 +114,8 @@ I decided to use the left and right camera angles and provide a correction value
 ![alt text][image3]
 
 I then cropped each image to only provide data of the road. This helped the model get rid of the noise. 
-![alt text][image4]
+
+![alt text][image1]
 
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3 as evidenced by the model training loss or validation loss was barely changing. I used an adam optimizer so that manually training the learning rate wasn't necessary.
