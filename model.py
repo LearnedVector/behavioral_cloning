@@ -21,27 +21,31 @@ train_samples, validation_samples = train_test_split(samples, test_size=0.2)
 
 angle_adjustments = 0.375
 
+
 def generator(samples, batch_size=32):
     num_samples = len(samples)
     while 1: # loops forever so the generator never terminates
         random.shuffle(samples)
         for offset in range(0, num_samples, batch_size):
             batch_samples = samples[offset:offset+batch_size]
-            
+
             images = []
             angles = []
-            
+
             for batch_sample in batch_samples:
                 for i in range(3):
                     name = './udacity_data/IMG/'+batch_sample[i].split('/')[-1]
                     image = cv2.imread(name)
                     images.append(image)
+                    # appends the center camera image with the correct steering angle
                     if i == 0:
                         angle = float(batch_sample[3])
                         angles.append(angle)
+                    # appends the left camera image with an adjusted steering angle
                     if i == 1:
                         angle = float(batch_sample[3]) + angle_adjustments
                         angles.append(angle)
+                    # appends the right camera image with an adjusted steering angle
                     if i == 2:
                         angle = float(batch_sample[3]) - angle_adjustments
                         angles.append(angle)
@@ -64,6 +68,7 @@ from keras.layers import Cropping2D
 
 model = Sequential()
 
+# Using the Nvidia Model
 model.add(Cropping2D(cropping=((70,25),(1,1)), input_shape=(160,320,3)))
 model.add(Convolution2D(24,5,5,subsample=(2,2),activation="relu"))
 model.add(Convolution2D(36,5,5,subsample=(2,2),activation="relu"))

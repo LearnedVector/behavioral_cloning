@@ -72,7 +72,7 @@ The car was still not staying on the road so I implemented the right and left ca
 
 After tweaking the model a bit. I decided to go with NVidia's model. It was a big upgrade from previouos model, but the car was still going off the road on the dirt road turns. 
 
-I decided to use Udacities provided data after a few attempt of collecting my own data. The Udacities data worked better then the one's I've collected. 
+I decided to use Udacity's provided data after a few attempt of collecting my own data. The Udacities data worked better then the one's I've collected. 
 
 I tweaked the correction value for the right and left camera until the car finally made it around the track. 
 
@@ -117,5 +117,6 @@ I then cropped each image to only provide data of the road. This helped the mode
 
 ![alt text][image1]
 
+An Interesting finding is that I did not normalize my data set and I still received the satisfactory results. I did have to use a larger correction steering angle for the left and right camera images for it to work. 
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 3 as evidenced by the model training loss or validation loss was barely changing. I used an adam optimizer so that manually training the learning rate wasn't necessary.
