@@ -5,7 +5,7 @@
 [image2]: ./images/right.jpg "right"
 [image3]: ./images/left.jpg "left"
 [image4]: ./images/crop.jpg "crop"
-[image5]: ./images/behavioral_cloning.gf "gif"
+[image5]: ./images/behavioral_cloning.gif "gif"
 
 ![alt text][image5]
 
