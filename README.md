@@ -1,4 +1,13 @@
 **Behavioral Cloning Project**
+[//]: # (Image References)
+
+[image1]: ./images/center.jpg "center"
+[image2]: ./images/right.jpg "right"
+[image3]: ./images/left.jpg "left"
+[image4]: ./images/crop.jpg "crop"
+[image5]: ./images/behavioral_cloning.gf "gif"
+
+![alt text][image5]
 
 The goals / steps of this project are the following:
 * Use the simulator to collect data of good driving behavior
@@ -8,16 +17,8 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 
-[//]: # (Image References)
-
-[image1]: ./images/center.jpg "center"
-[image2]: ./images/right.jpg "right"
-[image3]: ./images/left.jpg "left"
-[image4]: ./images/crop.jpg "crop"
 
 ---
-### Files Submitted & Code Quality
-
 #### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
